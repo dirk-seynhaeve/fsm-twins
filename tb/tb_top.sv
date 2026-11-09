@@ -3,8 +3,6 @@
 // Testbench top: a clock, the design, and the UVM test. Pick the test with +UVM_TESTNAME
 // (twins_test by default).
 
-`timescale 1ns / 1ps
-
 module tb_top;
   import uvm_pkg::*;
   import twins_uvm_pkg::*;

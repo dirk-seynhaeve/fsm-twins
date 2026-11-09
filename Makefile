@@ -27,7 +27,7 @@ sim/.compiled: $(VHDL) $(SV) $(wildcard tb/uvm/*.svh)
 	@mkdir -p sim
 	cd sim && vlib work
 	cd sim && vcom -quiet -2008 $(addprefix ../,$(VHDL))
-	cd sim && vlog -quiet -sv +incdir+../tb/uvm $(addprefix ../,$(SV))
+	cd sim && vlog -quiet -sv -timescale 1ns/1ps +incdir+../tb/uvm $(addprefix ../,$(SV))
 	@touch $@
 
 run: compile
